@@ -11,19 +11,22 @@ def index_routes(routes, cityList):
 
 
 def cleanDataset():
-    filenames = next(os.walk("server/TSP Datasets/"),
+    filenames = next(os.walk(os.getcwd ()+"/TSP Datasets/"),
                      (None, None, []))[2]  # [] if no file
+    print(filenames)
+    validDatasetFiles = []
     for filename in filenames:
         if filename.endswith(".tsp"):
-            filepath = "server/TSP Datasets/" + filename
+            validDatasetFiles.append(filename.split('.')[0])
+            filepath = os.getcwd ()+"/TSP Datasets/" + filename
             if "EUC_2D" not in open(filepath).read():
-                tour_filepath = "server/TSP Datasets/" + \
+                tour_filepath = os.getcwd ()+"/TSP Datasets/" + \
                     filename.split('.')[0] + ".opt.tour"
                 if os.path.exists(filepath):
                     os.remove(filepath)
                 if os.path.exists(tour_filepath):
                     os.remove(tour_filepath)
-
+    print(validDatasetFiles)
 
 def getCitiesFromFile(filename):
 
@@ -107,7 +110,6 @@ def findTSPSolution(request):
     # plt.show()    
     ans["Plot Location"] = plotLocation
     return ans
-
 
 
 # findTSPSolution({"type": "VALUE", "value": "5"})
