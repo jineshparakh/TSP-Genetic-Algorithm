@@ -47,7 +47,7 @@ def generateRandomCities(numberOfCities):
                         y=int(random.random() * 25)))
     return cityList
 
-    
+
 
 def findTSPSolution(request):
     ans = {}
@@ -107,7 +107,7 @@ def findTSPSolution(request):
     ans["Cost"] = cost
     plotLocation = os.getcwd()+"/plots/" + str(random.randint(0,100000000000000)%1000000007)+".png"
     plt.savefig(plotLocation)
-    # plt.show()    
+    # plt.show()
     ans["Plot Location"] = plotLocation
     return ans
 
