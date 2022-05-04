@@ -34,8 +34,7 @@ def getCitiesFromFile(filename):
     fileContents = open(filepath, 'r').readlines()[6:-1]
     cityList = []
     for line in fileContents:
-        city = [float(s) for s in line.split() if s.isdecimal()]
-        print(city)
+        city = [float(s) for s in line.split(" ")]
         cityList.append(City(city[1], city[2]))
 
     return cityList
