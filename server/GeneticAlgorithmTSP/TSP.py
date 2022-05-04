@@ -1,3 +1,4 @@
+from http.client import LineTooLong
 from GeneticAlgorithmTSP.GeneticAlgorithm import GeneticAlgorithm
 import random
 from GeneticAlgorithmTSP.City import City
@@ -34,7 +35,7 @@ def getCitiesFromFile(filename):
     fileContents = open(filepath, 'r').readlines()[6:-1]
     cityList = []
     for line in fileContents:
-        city = [float(s) for s in line.split(" ")]
+        city = [float(s) for s in line.split(" ") if s!=""]
         cityList.append(City(city[1], city[2]))
 
     return cityList
