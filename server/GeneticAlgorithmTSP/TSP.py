@@ -35,10 +35,10 @@ def getCitiesFromFile(filename):
     cityList = []
     for line in fileContents:
         city = [float(s) for s in line.split() if s.isdecimal()]
+        print(city)
         cityList.append(City(city[1], city[2]))
 
     return cityList
-
 
 def generateRandomCities(numberOfCities):
     cityList = []
@@ -62,15 +62,15 @@ def findTSPSolution(request):
     ga = GeneticAlgorithm(popSize, cityList)
     ans['Cities'] = str(cityList)
     ans["Initial Population"] = index_routes(ga.population.routes, cityList)
-
+    generation ={}
     for i in range(n_generations):
         print("--------Generation ", i, "-----------")
         ga.selection()
         ga.crossover(cityList)
         ga.mutation(cityList)
-        ans["Generation " + str(i)] = ga.replacement(cityList)
+        generation["Generation " + str(i)] = ga.replacement(cityList)
     # print(ans)
-
+    ans["Generation Data"] = generation
     X = [cityList[i].x for i in range(len(cityList))]
     y = [cityList[i].y for i in range(len(cityList))]
 
