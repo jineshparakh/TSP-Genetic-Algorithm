@@ -1,4 +1,4 @@
-import { Center, Container, Modal, Table } from '@mantine/core'
+import { Center, Container, Modal, Space, Table } from '@mantine/core'
 import React from 'react'
 
 
@@ -45,7 +45,15 @@ export default function MyModal({data, opened, setOpened}) {
 
         </Table>
        </Center>
-
+       <Space h="md"/>
+        <Center>
+          Cost Array: {data["Cost"].toString()}
+        </Center>
+        <Space h="md"/>
+        <Center>
+          Minimum Distance Travelled: {data["Cost"].reduce((a,b)=>a+b)
+}
+        </Center>
       </>
      ) : null }
    </Container>

@@ -103,7 +103,7 @@ def findTSPSolution(request):
         connectpoints(ga.fittest_route, i, i+1, cost[i])
     connectpoints(ga.fittest_route, len(ga.fittest_route) -
                 1, 0, cost[len(ga.fittest_route)-1])
-    # print("Cost:", cost)
+    print("Cost:", cost)
     ans["Cost"] = cost
     parentLoc = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) + "/client"+"/src/"
     plotLocation = "imgs/" + str(random.randint(0,100000000000000)%1000000007)+".png"
