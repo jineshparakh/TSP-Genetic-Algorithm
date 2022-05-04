@@ -105,7 +105,7 @@ def findTSPSolution(request):
                 1, 0, cost[len(ga.fittest_route)-1])
     # print("Cost:", cost)
     ans["Cost"] = cost
-    parentLoc = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) + "/client"+"/public/"
+    parentLoc = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) + "/client"+"/src/"
     plotLocation = "imgs/" + str(random.randint(0,100000000000000)%1000000007)+".png"
     plt.savefig(parentLoc + plotLocation)
     # plt.show()
