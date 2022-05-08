@@ -5,6 +5,7 @@
   "dependencies": {
     "@mantine/core": "^4.2.2",
     "@mantine/form": "^4.2.2",
+    "@mantine/hooks": "^4.2.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
