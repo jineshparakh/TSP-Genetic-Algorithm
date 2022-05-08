@@ -2,7 +2,7 @@
 
 ### This project aims to use Genetic Algorithms for optimizing the Travelling Salesperson Problem.
 
-The datasets come from TSPLIB, a collection of traveling salesman problem datasets maintained by ***Gerhard Reinelt*** at [Click Here](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp)
+The datasets come from TSPLIB, a collection of traveling salseperson problem datasets maintained by ***Gerhard Reinelt*** at [Click Here](http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp)
 We have chosen a subset of EUC_2D examples as the dataset.
 
 ## Genetic Operators Used
