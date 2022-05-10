@@ -7,9 +7,9 @@ We have chosen a subset of EUC_2D examples as the dataset.
 
 ## Genetic Operators Used
 
-**Selection:** Process of selecting two or more parent chromosomes from a given generation of population for mating. Here we have used ***tournament selection***.
-**Crossover:** Operation performed on the parents to produce offsprings. Here we have used ***order crossover*** with probability p<sub>c</sub>.
-**Mutation:** Permanent change in the sequence of DNA. Here, ***Swap mutation*** is performed with probability p<sub>m</sub>
+**Selection:** Process of selecting two or more parent chromosomes from a given generation of population for mating. Here we have used ***tournament selection***.<br>
+**Crossover:** Operation performed on the parents to produce offsprings. Here we have used ***order crossover*** with probability p<sub>c</sub>.<br>
+**Mutation:** Permanent change in the sequence of DNA. Here, ***Swap mutation*** is performed with probability p<sub>m</sub><br>
 
 
 
